@@ -28,7 +28,7 @@ export default function Newsletter() {
                     </p>
 
                     <h2 className="font-typewriter text-2xl md:text-3xl tracking-[0.2em] uppercase text-white">
-                        Join the End of the World.
+                        Join the End.
                     </h2>
 
                     <p className="font-roboto text-zinc-500 text-sm leading-8">
