@@ -75,14 +75,14 @@ export default function Hero() {
                 </Link>
 
                 <Link
-                    href="/about"
+                    href="/about-the-project"
                     className="group p-6 md:p-8 text-center transition-colors duration-300"
                     style={{ border: "1px solid #ffffff11" }}
                     onMouseEnter={e => (e.currentTarget.style.borderColor = "#26C2F8")}
                     onMouseLeave={e => (e.currentTarget.style.borderColor = "#ffffff11")}
                 >
                     <p className="font-typewriter text-xs tracking-[0.2em] uppercase text-zinc-500 group-hover:text-white transition-colors duration-300 mb-3">✦</p>
-                    <p className="font-typewriter text-sm tracking-[0.15em] uppercase text-zinc-300 group-hover:text-white transition-colors duration-300">About Me</p>
+                    <p className="font-typewriter text-sm tracking-[0.15em] uppercase text-zinc-300 group-hover:text-white transition-colors duration-300">About</p>
                     <p className="text-xs text-zinc-500 mt-2 font-roboto">Lorem ipsum dolor sit amet</p>
                 </Link>
 
@@ -103,18 +103,24 @@ export default function Hero() {
 
             {/* search input — appears below cards */}
             {searchOpen && (
-                <div className="w-full max-w-6xl mt-4 flex items-center gap-4 px-2">
+                <div
+                    className="w-full max-w-6xl mt-4 flex items-center gap-4 px-4 py-4"
+                    style={{
+                        border: "1px solid transparent",
+                        borderImage: "linear-gradient(to right, #BC2205, #AD3200, #D00034, #8E488D, #9A659F, #3BB7EE, #26C2F8) 1",
+                    }}
+                >
                     <input
                         type="text"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         placeholder="search..."
                         autoFocus
-                        className="w-full bg-transparent border-b border-zinc-700 focus:border-white outline-none text-white text-xs font-typewriter tracking-[0.15em] placeholder:text-zinc-600 pb-2 transition-colors duration-300"
+                        className="w-full bg-transparent outline-none text-white text-xs font-roboto tracking-wide placeholder:text-zinc-600 px-2"
                     />
                     <button
                         onClick={() => { setSearchOpen(false); setSearchQuery(""); }}
-                        className="text-zinc-600 hover:text-white font-typewriter text-xs tracking-[0.2em] uppercase transition-colors duration-300 flex-shrink-0"
+                        className="text-zinc-600 hover:text-white font-roboto text-xs transition-colors duration-300 flex-shrink-0 pr-2"
                     >
                         ✕
                     </button>
