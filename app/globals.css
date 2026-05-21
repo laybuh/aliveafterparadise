@@ -10,6 +10,7 @@
   --color-lavender: #9A659F;
   --font-typewriter: "Courier New", monospace;
   --font-roboto: "Roboto", sans-serif;
+  --font-pixel: "Press Start 2P", monospace;
 }
 
 @layer base {
@@ -25,8 +26,19 @@
     font-family: var(--font-roboto), sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-typewriter), monospace;
+  }
+}
+
+@layer utilities {
+  .font-pixel {
+    font-family: var(--font-pixel);
   }
 }
 
@@ -41,21 +53,21 @@ body::after {
   background-repeat: repeat;
   background-size: 200px 200px;
 }
+
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: 9998;
   pointer-events: none;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 8px,
-    rgba(188, 34, 5, 0.02) 8px,
-    rgba(188, 34, 5, 0.03) 9px
-  );
+  background: repeating-linear-gradient(0deg,
+      transparent,
+      transparent 8px,
+      rgba(188, 34, 5, 0.02) 8px,
+      rgba(188, 34, 5, 0.03) 9px);
 }
 
-html, body {
+html,
+body {
   background-color: #000000;
 }

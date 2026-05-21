@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Courier_Prime, Roboto } from "next/font/google";
+import { Courier_Prime, Roboto, Press_Start_2P } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -17,6 +17,12 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 
+const pressStart = Press_Start_2P({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-pixel",
+});
+
 export const metadata: Metadata = {
   title: "Real Gods Require Blood",
   description: "Multi-verse Bible Project + Portfolio for Working Artist Jasmine Plaskon",
@@ -29,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${courierPrime.variable} ${roboto.variable}`}>
+      <body className={`${courierPrime.variable} ${roboto.variable} ${pressStart.variable}`}>
         <AgeGate />
         <Navbar />
         {children}

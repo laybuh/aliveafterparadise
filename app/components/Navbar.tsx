@@ -23,23 +23,37 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md" style={{ background: "rgba(0,0,0,0.95)" }}>
-
+        <nav
+            className="fixed top-0 left-0 w-full z-50"
+            style={{
+                background: "#0a0a0a",
+                borderBottom: "2px solid #000000",
+                borderTop: "1px solid #3a3a3a",
+                boxShadow: "0 2px 0px #000000, inset 0 1px 0px #444444",
+            }}
+        >
             {/* top gradient line */}
-            <div className="h-[1px] w-full opacity-30" style={{ background: gradient }} />
+            <div className="h-[2px] w-full" style={{ background: gradient, opacity: 0.6 }} />
 
-            <div className="max-w-7xl mx-auto px-6 md:px-10 py-4 md:py-6 flex items-center justify-between">
+            <div className="max-w-7xl mx-auto px-6 md:px-10 py-4 md:py-5 flex items-center justify-between">
 
                 {/* site title */}
                 <Link
                     href="/"
                     onClick={handleHomeClick}
-                    className="font-typewriter text-white text-xs md:text-sm tracking-[0.15em] md:tracking-[0.25em] uppercase hover:text-crimson transition-colors duration-500">
-                    ✦ Real Gods Require Blood
+                    className="font-pixel text-[9px] md:text-[10px] uppercase hover:opacity-80 transition-opacity duration-500 flex items-center gap-2">
+                    <span className="relative bottom-[3px] text-white">✦</span>
+                    <span style={{
+                        background: "linear-gradient(to right, #BC2205, #D00034, #8E488D, #9A659F, #26C2F8)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                    }}>
+                        Real Gods Require Blood
+                    </span>
                 </Link>
 
                 {/* desktop links */}
-                <div className="hidden md:flex items-center gap-10">
+                <div className="hidden md:flex items-center gap-3">
                     {navLinks.map((link) => (
                         <Link
                             key={link.href}
@@ -47,7 +61,29 @@ export default function Navbar() {
                             onClick={() => {
                                 if (link.href === "/") handleHomeClick();
                             }}
-                            className="text-xs text-zinc-300 hover:text-white tracking-[0.2em] uppercase font-typewriter transition-colors duration-300"
+                            className="text-[8px] text-zinc-300 hover:text-white uppercase font-pixel transition-all duration-150 px-3 py-2"
+                            style={{
+                                borderTop: "1px solid #3a3a3a",
+                                borderLeft: "1px solid #3a3a3a",
+                                borderBottom: "1px solid #000000",
+                                borderRight: "1px solid #000000",
+                                boxShadow: "inset 1px 1px 0px #555555",
+                                background: "#0a0a0a",
+                            }}
+                            onMouseEnter={e => {
+                                e.currentTarget.style.borderTop = "1px solid #000000";
+                                e.currentTarget.style.borderLeft = "1px solid #000000";
+                                e.currentTarget.style.borderBottom = "1px solid #3a3a3a";
+                                e.currentTarget.style.borderRight = "1px solid #3a3a3a";
+                                e.currentTarget.style.boxShadow = "inset -1px -1px 0px #555555";
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.borderTop = "1px solid #3a3a3a";
+                                e.currentTarget.style.borderLeft = "1px solid #3a3a3a";
+                                e.currentTarget.style.borderBottom = "1px solid #000000";
+                                e.currentTarget.style.borderRight = "1px solid #000000";
+                                e.currentTarget.style.boxShadow = "inset 1px 1px 0px #555555";
+                            }}
                         >
                             {link.label}
                         </Link>
@@ -56,19 +92,31 @@ export default function Navbar() {
 
                 {/* mobile menu button */}
                 <button
-                    className="md:hidden text-zinc-300 hover:text-white transition-colors font-typewriter text-xs tracking-[0.2em] uppercase flex-shrink-0"
+                    className="md:hidden text-zinc-300 hover:text-white transition-colors font-pixel text-[9px] uppercase flex-shrink-0 px-3 py-2"
+                    style={{
+                        borderTop: "1px solid #3a3a3a",
+                        borderLeft: "1px solid #3a3a3a",
+                        borderBottom: "1px solid #000000",
+                        borderRight: "1px solid #000000",
+                        boxShadow: "inset 1px 1px 0px #555555",
+                        background: "#0a0a0a",
+                    }}
                     onClick={() => setMenuOpen(!menuOpen)}
                 >
                     {menuOpen ? "✕" : "☰"}
                 </button>
             </div>
 
-            {/* bottom gradient line */}
-            <div className="h-[1px] w-full opacity-30" style={{ background: gradient }} />
-
             {/* mobile menu */}
             {menuOpen && (
-                <div className="md:hidden flex flex-col px-6 py-6 gap-5 border-t border-white/5" style={{ background: "rgba(10,10,10,0.98)" }}>
+                <div
+                    className="md:hidden flex flex-col px-6 py-6 gap-3"
+                    style={{
+                        background: "#0a0a0a",
+                        borderTop: "1px solid #000000",
+                        boxShadow: "inset 0 1px 0px #444444",
+                    }}
+                >
                     {navLinks.map((link) => (
                         <Link
                             key={link.href}
@@ -77,7 +125,15 @@ export default function Navbar() {
                                 setMenuOpen(false);
                                 if (link.href === "/") handleHomeClick();
                             }}
-                            className="text-xs text-zinc-300 hover:text-white tracking-[0.2em] uppercase font-typewriter transition-colors duration-300 py-2 border-b border-white/5"
+                            className="text-[9px] text-zinc-300 hover:text-white uppercase font-pixel transition-colors duration-300 py-3 px-4"
+                            style={{
+                                borderTop: "1px solid #3a3a3a",
+                                borderLeft: "1px solid #3a3a3a",
+                                borderBottom: "1px solid #000000",
+                                borderRight: "1px solid #000000",
+                                boxShadow: "inset 1px 1px 0px #555555",
+                                background: "#0a0a0a",
+                            }}
                         >
                             {link.label}
                         </Link>
