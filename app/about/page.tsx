@@ -1,25 +1,46 @@
 export default function About() {
     return (
-        <main
-            className="min-h-screen px-10 pt-32 pb-20 max-w-4xl mx-auto"
-            style={{
-                background: "radial-gradient(ellipse at 20% 20%, #1a050588 0%, transparent 40%), #0a0a0a",
-            }}
-        >
+        <main className="min-h-screen px-10 pt-32 pb-20 max-w-4xl mx-auto">
+
             {/* page header */}
-            <div className="mb-16">
-                <p className="font-roboto text-xs text-zinc-600 tracking-[0.2em] uppercase mb-4">
-                    ✦ About
-                </p>
-                <h1 className="font-typewriter text-4xl md:text-5xl tracking-wide uppercase text-white mb-6">
-                    About Me
-                </h1>
+            <div
+                className="mb-16"
+                style={{
+                    background: "transparent",
+                    borderTop: "1px solid #2a2a2a",
+                    borderLeft: "1px solid #2a2a2a",
+                    borderBottom: "1px solid #111111",
+                    borderRight: "1px solid #111111",
+                    boxShadow: "inset 1px 1px 0px #333333, inset -1px -1px 0px #000000",
+                }}
+            >
+                {/* title bar */}
                 <div
-                    className="h-[1px] w-full opacity-30"
+                    className="w-full flex items-center px-3 py-1"
                     style={{
-                        background: "linear-gradient(to right, #BC2205, #AD3200, #D00034, #8E488D, #9A659F, #3BB7EE, #26C2F8)",
+                        background: "transparent",
+                        borderBottomWidth: "1px",
+                        borderBottomStyle: "solid",
+                        borderBottomColor: "transparent",
+                        borderImage: "linear-gradient(to right, #BC2205, #AD3200, #D00034, #8E488D, #9A659F, #3BB7EE, #26C2F8) 1",
                     }}
-                />
+                >
+                    <span className="font-pixel text-zinc-600 text-[8px]">✦ about</span>
+                </div>
+
+                {/* window content */}
+                <div className="px-8 py-8">
+                    <h1
+                        className="font-pixel text-2xl md:text-3xl uppercase leading-loose"
+                        style={{
+                            background: "linear-gradient(to right, #BC2205, #D00034, #8E488D, #9A659F, #26C2F8)",
+                            WebkitBackgroundClip: "text",
+                            WebkitTextFillColor: "transparent",
+                        }}
+                    >
+                        About Me
+                    </h1>
+                </div>
             </div>
 
             {/* content */}
@@ -45,7 +66,7 @@ export default function About() {
 
                     {/* links */}
                     <div className="flex flex-col gap-3 mt-4">
-                        <p className="font-typewriter text-xs text-zinc-600 tracking-[0.2em] uppercase mb-2">
+                        <p className="font-pixel text-[8px] text-zinc-600 uppercase mb-2">
                             Find Me
                         </p>
 

@@ -44,19 +44,44 @@ export default function Shop() {
         <main className="min-h-screen px-10 pt-32 pb-20 max-w-7xl mx-auto">
 
             {/* page header */}
-            <div className="mb-16">
-                <p className="font-roboto text-xs text-zinc-500 tracking-[0.2em] uppercase mb-4">
-                    ✦ Shop
-                </p>
-                <h1 className="font-typewriter text-4xl md:text-5xl tracking-wide uppercase text-white mb-6">
-                    The Shop
-                </h1>
+            <div
+                className="mb-16"
+                style={{
+                    background: "transparent",
+                    borderTop: "1px solid #2a2a2a",
+                    borderLeft: "1px solid #2a2a2a",
+                    borderBottom: "1px solid #111111",
+                    borderRight: "1px solid #111111",
+                    boxShadow: "inset 1px 1px 0px #333333, inset -1px -1px 0px #000000",
+                }}
+            >
+                {/* title bar */}
                 <div
-                    className="h-[1px] w-full opacity-30"
+                    className="w-full flex items-center px-3 py-1"
                     style={{
-                        background: "linear-gradient(to right, #BC2205, #AD3200, #D00034, #8E488D, #9A659F, #3BB7EE, #26C2F8)",
+                        background: "transparent",
+                        borderBottomWidth: "1px",
+                        borderBottomStyle: "solid",
+                        borderBottomColor: "transparent",
+                        borderImage: "linear-gradient(to right, #BC2205, #AD3200, #D00034, #8E488D, #9A659F, #3BB7EE, #26C2F8) 1",
                     }}
-                />
+                >
+                    <span className="font-pixel text-zinc-600 text-[8px]">✦ shop</span>
+                </div>
+
+                {/* window content */}
+                <div className="px-8 py-8">
+                    <h1
+                        className="font-pixel text-2xl md:text-3xl uppercase leading-loose"
+                        style={{
+                            background: "linear-gradient(to right, #BC2205, #D00034, #8E488D, #9A659F, #26C2F8)",
+                            WebkitBackgroundClip: "text",
+                            WebkitTextFillColor: "transparent",
+                        }}
+                    >
+                        The Shop
+                    </h1>
+                </div>
             </div>
 
             {/* products grid */}
@@ -90,10 +115,29 @@ export default function Shop() {
                                     {product.price}
                                 </p>
                                 <button
-                                    className="font-roboto text-xs text-zinc-500 hover:text-white tracking-widest uppercase transition-colors duration-300 px-4 py-2"
-                                    style={{ border: "1px solid #ffffff11" }}
-                                    onMouseEnter={e => (e.currentTarget.style.borderColor = "#BC2205")}
-                                    onMouseLeave={e => (e.currentTarget.style.borderColor = "#ffffff11")}
+                                    className="font-pixel text-[8px] text-zinc-400 hover:text-white uppercase transition-all duration-150 px-4 py-2"
+                                    style={{
+                                        background: "#0a0a0a",
+                                        borderTop: "1px solid #3a3a3a",
+                                        borderLeft: "1px solid #3a3a3a",
+                                        borderBottom: "1px solid #000000",
+                                        borderRight: "1px solid #000000",
+                                        boxShadow: "inset 1px 1px 0px #555555",
+                                    }}
+                                    onMouseEnter={e => {
+                                        e.currentTarget.style.borderTop = "1px solid #000000";
+                                        e.currentTarget.style.borderLeft = "1px solid #000000";
+                                        e.currentTarget.style.borderBottom = "1px solid #3a3a3a";
+                                        e.currentTarget.style.borderRight = "1px solid #3a3a3a";
+                                        e.currentTarget.style.boxShadow = "inset -1px -1px 0px #555555";
+                                    }}
+                                    onMouseLeave={e => {
+                                        e.currentTarget.style.borderTop = "1px solid #3a3a3a";
+                                        e.currentTarget.style.borderLeft = "1px solid #3a3a3a";
+                                        e.currentTarget.style.borderBottom = "1px solid #000000";
+                                        e.currentTarget.style.borderRight = "1px solid #000000";
+                                        e.currentTarget.style.boxShadow = "inset 1px 1px 0px #555555";
+                                    }}
                                 >
                                     Add to Cart
                                 </button>

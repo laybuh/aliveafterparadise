@@ -17,7 +17,7 @@ export default function Hero() {
 
             {/* title */}
             <h1
-                className="font-typewriter text-2xl md:text-4xl lg:text-5xl tracking-wide uppercase mb-4 leading-tight"
+                className="font-pixel text-lg md:text-2xl lg:text-3xl uppercase mb-4 leading-loose"
                 style={{
                     background: "linear-gradient(to right, #BC2205, #D00034, #8E488D, #9A659F, #26C2F8)",
                     WebkitBackgroundClip: "text",
@@ -37,12 +37,16 @@ export default function Hero() {
                 className="w-full max-w-[280px] md:max-w-[500px] h-[170px] md:h-[300px] mb-10 md:mb-16 flex items-center justify-center"
                 style={{
                     background: "linear-gradient(135deg, #1a050533, #12081833, #0a0a1433)",
-                    border: "1px solid #8E488D44",
+                    borderTop: "2px solid #3a3a3a",
+                    borderLeft: "2px solid #3a3a3a",
+                    borderBottom: "2px solid #000000",
+                    borderRight: "2px solid #000000",
+                    boxShadow: "inset 1px 1px 0px #555555, inset -1px -1px 0px #000000",
                 }}
             />
 
             {/* lorem text */}
-            <p className="max-w-[280px] md:max-w-xl text-zinc-400 text-xs md:text-sm leading-8 mb-10 md:mb-16 font-roboto">
+            <p className="max-w-[280px] md:max-w-[500px] text-zinc-400 text-xs md:text-sm leading-8 mb-10 md:mb-16 font-roboto">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -52,50 +56,126 @@ export default function Hero() {
 
                 <Link
                     href="/gallery"
-                    className="group p-6 md:p-8 text-center transition-colors duration-300"
-                    style={{ border: "1px solid #ffffff11" }}
-                    onMouseEnter={e => (e.currentTarget.style.borderColor = "#BC2205")}
-                    onMouseLeave={e => (e.currentTarget.style.borderColor = "#ffffff11")}
+                    className="group p-6 md:p-8 text-center transition-all duration-150"
+                    style={{
+                        borderTop: "2px solid #3a3a3a",
+                        borderLeft: "2px solid #3a3a3a",
+                        borderBottom: "2px solid #000000",
+                        borderRight: "2px solid #000000",
+                        boxShadow: "inset 1px 1px 0px #555555",
+                        background: "#0a0a0a",
+                    }}
+                    onMouseEnter={e => {
+                        e.currentTarget.style.borderTop = "2px solid #000000";
+                        e.currentTarget.style.borderLeft = "2px solid #000000";
+                        e.currentTarget.style.borderBottom = "2px solid #3a3a3a";
+                        e.currentTarget.style.borderRight = "2px solid #3a3a3a";
+                        e.currentTarget.style.boxShadow = "inset -1px -1px 0px #555555";
+                    }}
+                    onMouseLeave={e => {
+                        e.currentTarget.style.borderTop = "2px solid #3a3a3a";
+                        e.currentTarget.style.borderLeft = "2px solid #3a3a3a";
+                        e.currentTarget.style.borderBottom = "2px solid #000000";
+                        e.currentTarget.style.borderRight = "2px solid #000000";
+                        e.currentTarget.style.boxShadow = "inset 1px 1px 0px #555555";
+                    }}
                 >
-                    <p className="font-typewriter text-xs tracking-[0.2em] uppercase text-zinc-500 group-hover:text-white transition-colors duration-300 mb-3">✦</p>
-                    <p className="font-typewriter text-sm tracking-[0.15em] uppercase text-zinc-300 group-hover:text-white transition-colors duration-300">The Visuals</p>
+                    <p className="font-pixel text-[8px] uppercase text-zinc-500 group-hover:text-white transition-colors duration-300 mb-3">✦</p>
+                    <p className="font-pixel text-[9px] uppercase text-zinc-300 group-hover:text-white transition-colors duration-300 leading-loose">The Visuals</p>
                     <p className="text-xs text-zinc-500 mt-2 font-roboto">Lorem ipsum dolor sit amet</p>
                 </Link>
 
                 <Link
                     href="/story-list"
-                    className="group p-6 md:p-8 text-center transition-colors duration-300"
-                    style={{ border: "1px solid #ffffff11" }}
-                    onMouseEnter={e => (e.currentTarget.style.borderColor = "#8E488D")}
-                    onMouseLeave={e => (e.currentTarget.style.borderColor = "#ffffff11")}
+                    className="group p-6 md:p-8 text-center transition-all duration-150"
+                    style={{
+                        borderTop: "2px solid #3a3a3a",
+                        borderLeft: "2px solid #3a3a3a",
+                        borderBottom: "2px solid #000000",
+                        borderRight: "2px solid #000000",
+                        boxShadow: "inset 1px 1px 0px #555555",
+                        background: "#0a0a0a",
+                    }}
+                    onMouseEnter={e => {
+                        e.currentTarget.style.borderTop = "2px solid #000000";
+                        e.currentTarget.style.borderLeft = "2px solid #000000";
+                        e.currentTarget.style.borderBottom = "2px solid #3a3a3a";
+                        e.currentTarget.style.borderRight = "2px solid #3a3a3a";
+                        e.currentTarget.style.boxShadow = "inset -1px -1px 0px #555555";
+                    }}
+                    onMouseLeave={e => {
+                        e.currentTarget.style.borderTop = "2px solid #3a3a3a";
+                        e.currentTarget.style.borderLeft = "2px solid #3a3a3a";
+                        e.currentTarget.style.borderBottom = "2px solid #000000";
+                        e.currentTarget.style.borderRight = "2px solid #000000";
+                        e.currentTarget.style.boxShadow = "inset 1px 1px 0px #555555";
+                    }}
                 >
-                    <p className="font-typewriter text-xs tracking-[0.2em] uppercase text-zinc-500 group-hover:text-white transition-colors duration-300 mb-3">✦</p>
-                    <p className="font-typewriter text-sm tracking-[0.15em] uppercase text-zinc-300 group-hover:text-white transition-colors duration-300">The Stories</p>
+                    <p className="font-pixel text-[8px] uppercase text-zinc-500 group-hover:text-white transition-colors duration-300 mb-3">✦</p>
+                    <p className="font-pixel text-[9px] uppercase text-zinc-300 group-hover:text-white transition-colors duration-300 leading-loose">The Stories</p>
                     <p className="text-xs text-zinc-500 mt-2 font-roboto">Lorem ipsum dolor sit amet</p>
                 </Link>
 
                 <Link
                     href="/about-the-project"
-                    className="group p-6 md:p-8 text-center transition-colors duration-300"
-                    style={{ border: "1px solid #ffffff11" }}
-                    onMouseEnter={e => (e.currentTarget.style.borderColor = "#26C2F8")}
-                    onMouseLeave={e => (e.currentTarget.style.borderColor = "#ffffff11")}
+                    className="group p-6 md:p-8 text-center transition-all duration-150"
+                    style={{
+                        borderTop: "2px solid #3a3a3a",
+                        borderLeft: "2px solid #3a3a3a",
+                        borderBottom: "2px solid #000000",
+                        borderRight: "2px solid #000000",
+                        boxShadow: "inset 1px 1px 0px #555555",
+                        background: "#0a0a0a",
+                    }}
+                    onMouseEnter={e => {
+                        e.currentTarget.style.borderTop = "2px solid #000000";
+                        e.currentTarget.style.borderLeft = "2px solid #000000";
+                        e.currentTarget.style.borderBottom = "2px solid #3a3a3a";
+                        e.currentTarget.style.borderRight = "2px solid #3a3a3a";
+                        e.currentTarget.style.boxShadow = "inset -1px -1px 0px #555555";
+                    }}
+                    onMouseLeave={e => {
+                        e.currentTarget.style.borderTop = "2px solid #3a3a3a";
+                        e.currentTarget.style.borderLeft = "2px solid #3a3a3a";
+                        e.currentTarget.style.borderBottom = "2px solid #000000";
+                        e.currentTarget.style.borderRight = "2px solid #000000";
+                        e.currentTarget.style.boxShadow = "inset 1px 1px 0px #555555";
+                    }}
                 >
-                    <p className="font-typewriter text-xs tracking-[0.2em] uppercase text-zinc-500 group-hover:text-white transition-colors duration-300 mb-3">✦</p>
-                    <p className="font-typewriter text-sm tracking-[0.15em] uppercase text-zinc-300 group-hover:text-white transition-colors duration-300">About</p>
+                    <p className="font-pixel text-[8px] uppercase text-zinc-500 group-hover:text-white transition-colors duration-300 mb-3">✦</p>
+                    <p className="font-pixel text-[9px] uppercase text-zinc-300 group-hover:text-white transition-colors duration-300 leading-loose">About</p>
                     <p className="text-xs text-zinc-500 mt-2 font-roboto">Lorem ipsum dolor sit amet</p>
                 </Link>
 
                 {/* search card */}
                 <button
                     onClick={() => setSearchOpen(!searchOpen)}
-                    className="group p-6 md:p-8 text-center transition-colors duration-300 w-full"
-                    style={{ border: `1px solid ${searchOpen ? "#9A659F" : "#ffffff11"}` }}
-                    onMouseEnter={e => (e.currentTarget.style.borderColor = "#9A659F")}
-                    onMouseLeave={e => (e.currentTarget.style.borderColor = searchOpen ? "#9A659F" : "#ffffff11")}
+                    className="group p-6 md:p-8 text-center transition-all duration-150 w-full"
+                    style={{
+                        borderTop: `2px solid ${searchOpen ? "#000000" : "#3a3a3a"}`,
+                        borderLeft: `2px solid ${searchOpen ? "#000000" : "#3a3a3a"}`,
+                        borderBottom: `2px solid ${searchOpen ? "#3a3a3a" : "#000000"}`,
+                        borderRight: `2px solid ${searchOpen ? "#3a3a3a" : "#000000"}`,
+                        boxShadow: searchOpen ? "inset -1px -1px 0px #555555" : "inset 1px 1px 0px #555555",
+                        background: "#0a0a0a",
+                    }}
+                    onMouseEnter={e => {
+                        e.currentTarget.style.borderTop = "2px solid #000000";
+                        e.currentTarget.style.borderLeft = "2px solid #000000";
+                        e.currentTarget.style.borderBottom = "2px solid #3a3a3a";
+                        e.currentTarget.style.borderRight = "2px solid #3a3a3a";
+                        e.currentTarget.style.boxShadow = "inset -1px -1px 0px #555555";
+                    }}
+                    onMouseLeave={e => {
+                        e.currentTarget.style.borderTop = searchOpen ? "2px solid #000000" : "2px solid #3a3a3a";
+                        e.currentTarget.style.borderLeft = searchOpen ? "2px solid #000000" : "2px solid #3a3a3a";
+                        e.currentTarget.style.borderBottom = searchOpen ? "2px solid #3a3a3a" : "2px solid #000000";
+                        e.currentTarget.style.borderRight = searchOpen ? "2px solid #3a3a3a" : "2px solid #000000";
+                        e.currentTarget.style.boxShadow = searchOpen ? "inset -1px -1px 0px #555555" : "inset 1px 1px 0px #555555";
+                    }}
                 >
-                    <p className="font-typewriter text-xs tracking-[0.2em] uppercase text-zinc-500 group-hover:text-white transition-colors duration-300 mb-3">✦</p>
-                    <p className="font-typewriter text-sm tracking-[0.15em] uppercase text-zinc-300 group-hover:text-white transition-colors duration-300">Search</p>
+                    <p className="font-pixel text-[8px] uppercase text-zinc-500 group-hover:text-white transition-colors duration-300 mb-3">✦</p>
+                    <p className="font-pixel text-[9px] uppercase text-zinc-300 group-hover:text-white transition-colors duration-300 leading-loose">Search</p>
                     <p className="text-xs text-zinc-500 mt-2 font-roboto">looking for something?</p>
                 </button>
 
@@ -106,8 +186,12 @@ export default function Hero() {
                 <div
                     className="w-full max-w-6xl mt-4 flex items-center gap-4 px-4 py-4"
                     style={{
-                        border: "1px solid transparent",
-                        borderImage: "linear-gradient(to right, #BC2205, #AD3200, #D00034, #8E488D, #9A659F, #3BB7EE, #26C2F8) 1",
+                        borderTop: "2px solid #000000",
+                        borderLeft: "2px solid #000000",
+                        borderBottom: "2px solid #3a3a3a",
+                        borderRight: "2px solid #3a3a3a",
+                        boxShadow: "inset -1px -1px 0px #555555",
+                        background: "#0a0a0a",
                     }}
                 >
                     <input

@@ -40,15 +40,23 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+
         {/* Ko-fi floating button */}
 
         <a href="https://ko-fi.com/alifeafterparadise"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-6 left-6 z-50 flex items-center gap-2 bg-black border border-zinc-700 hover:border-white text-white font-typewriter tracking-[0.1em] px-3 py-2 md:px-4 md:py-3 text-[10px] md:text-xs transition-all duration-300 hover:bg-zinc-900"
-          style={{ boxShadow: "0 0 20px rgba(0,0,0,0.5)" }}
+          className="fixed bottom-6 left-6 z-50 flex items-center gap-2 text-white font-pixel text-[8px] md:text-[9px] px-3 py-2 md:px-4 md:py-3 transition-all duration-150"
+          style={{
+            background: "#0a0a0a",
+            borderTop: "1px solid #3a3a3a",
+            borderLeft: "1px solid #3a3a3a",
+            borderBottom: "1px solid #000000",
+            borderRight: "1px solid #000000",
+            boxShadow: "inset 1px 1px 0px #555555",
+          }}
         >
-          ✦ KO-FI
+          ✦ ko-fi
         </a>
       </body>
     </html >
