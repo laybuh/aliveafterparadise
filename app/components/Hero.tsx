@@ -1,8 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Hero() {
+    const [searchOpen, setSearchOpen] = useState(false);
+    const [searchQuery, setSearchQuery] = useState("");
+
     return (
         <section
             className="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 md:pt-32 pb-20"
@@ -38,14 +42,13 @@ export default function Hero() {
             />
 
             {/* lorem text */}
-            <p className="max-w-[280px] md:max-w-xl text-zinc-400 text-xs md:text-sm leading-8 mb-10 md:mb-16 font-roboto"
->
+            <p className="max-w-[280px] md:max-w-xl text-zinc-400 text-xs md:text-sm leading-8 mb-10 md:mb-16 font-roboto">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
 
             {/* section highlight cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full max-w-4xl">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-6xl">
 
                 <Link
                     href="/gallery"
@@ -72,18 +75,52 @@ export default function Hero() {
                 </Link>
 
                 <Link
-                    href="/about-the-project"
+                    href="/about"
                     className="group p-6 md:p-8 text-center transition-colors duration-300"
                     style={{ border: "1px solid #ffffff11" }}
                     onMouseEnter={e => (e.currentTarget.style.borderColor = "#26C2F8")}
                     onMouseLeave={e => (e.currentTarget.style.borderColor = "#ffffff11")}
                 >
                     <p className="font-typewriter text-xs tracking-[0.2em] uppercase text-zinc-500 group-hover:text-white transition-colors duration-300 mb-3">✦</p>
-                    <p className="font-typewriter text-sm tracking-[0.15em] uppercase text-zinc-300 group-hover:text-white transition-colors duration-300">About</p>
+                    <p className="font-typewriter text-sm tracking-[0.15em] uppercase text-zinc-300 group-hover:text-white transition-colors duration-300">About Me</p>
                     <p className="text-xs text-zinc-500 mt-2 font-roboto">Lorem ipsum dolor sit amet</p>
                 </Link>
 
+                {/* search card */}
+                <button
+                    onClick={() => setSearchOpen(!searchOpen)}
+                    className="group p-6 md:p-8 text-center transition-colors duration-300 w-full"
+                    style={{ border: `1px solid ${searchOpen ? "#9A659F" : "#ffffff11"}` }}
+                    onMouseEnter={e => (e.currentTarget.style.borderColor = "#9A659F")}
+                    onMouseLeave={e => (e.currentTarget.style.borderColor = searchOpen ? "#9A659F" : "#ffffff11")}
+                >
+                    <p className="font-typewriter text-xs tracking-[0.2em] uppercase text-zinc-500 group-hover:text-white transition-colors duration-300 mb-3">✦</p>
+                    <p className="font-typewriter text-sm tracking-[0.15em] uppercase text-zinc-300 group-hover:text-white transition-colors duration-300">Search</p>
+                    <p className="text-xs text-zinc-500 mt-2 font-roboto">looking for something?</p>
+                </button>
+
             </div>
+
+            {/* search input — appears below cards */}
+            {searchOpen && (
+                <div className="w-full max-w-6xl mt-4 flex items-center gap-4 px-2">
+                    <input
+                        type="text"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        placeholder="search..."
+                        autoFocus
+                        className="w-full bg-transparent border-b border-zinc-700 focus:border-white outline-none text-white text-xs font-typewriter tracking-[0.15em] placeholder:text-zinc-600 pb-2 transition-colors duration-300"
+                    />
+                    <button
+                        onClick={() => { setSearchOpen(false); setSearchQuery(""); }}
+                        className="text-zinc-600 hover:text-white font-typewriter text-xs tracking-[0.2em] uppercase transition-colors duration-300 flex-shrink-0"
+                    >
+                        ✕
+                    </button>
+                </div>
+            )}
+
         </section>
     );
 }
