@@ -24,7 +24,7 @@ const pressStart = Press_Start_2P({
 });
 
 export const metadata: Metadata = {
-  title: "Real Gods Require Blood",
+  title: "themichiferqueen",
   description: "Multi-verse Bible Project + Portfolio for Working Artist Jasmine Plaskon",
 };
 
@@ -36,6 +36,43 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${courierPrime.variable} ${roboto.variable} ${pressStart.variable}`}>
+
+        {/* background image left */}
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "30%",
+            height: "100%",
+            zIndex: 0,
+            pointerEvents: "none",
+            backgroundImage: "url('/michifer.png')",
+            backgroundSize: "contain",
+            backgroundPosition: "left center",
+            backgroundRepeat: "no-repeat",
+            opacity: 0.06,
+          }}
+        />
+
+        {/* background image right */}
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            right: 0,
+            width: "30%",
+            height: "100%",
+            zIndex: 0,
+            pointerEvents: "none",
+            backgroundImage: "url('/michifer.png')",
+            backgroundSize: "contain",
+            backgroundPosition: "right center",
+            backgroundRepeat: "no-repeat",
+            opacity: 0.06,
+          }}
+        />
+
         <AgeGate />
         <Navbar />
         {children}
@@ -59,6 +96,6 @@ export default function RootLayout({
           ✦ ko-fi
         </a>
       </body>
-    </html >
+    </html>
   );
 }

@@ -48,7 +48,7 @@ export default function Navbar() {
                         WebkitBackgroundClip: "text",
                         WebkitTextFillColor: "transparent",
                     }}>
-                        Real Gods Require Blood
+                        themichiferqueen
                     </span>
                 </Link>
 

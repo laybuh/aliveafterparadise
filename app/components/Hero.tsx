@@ -29,7 +29,7 @@ export default function Hero() {
 
             {/* tagline */}
             <p className="font-roboto text-zinc-300 text-xs tracking-wide mb-8 md:mb-12">
-                Your #1 Source for Biblical Erotica
+                Your #1 Source for Lucifer/Michael ship content
             </p>
 
             {/* image placeholder */}
