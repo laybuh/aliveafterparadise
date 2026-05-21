@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Courier_Prime, Roboto } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const courierPrime = Courier_Prime({
   weight: ["400", "700"],
@@ -27,7 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${courierPrime.variable} ${roboto.variable}`}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
