@@ -18,6 +18,10 @@ export default function Navbar() {
 
     const gradient = "linear-gradient(to right, #BC2205, #AD3200, #D00034, #8E488D, #9A659F, #3BB7EE, #26C2F8)";
 
+    const handleHomeClick = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
     return (
         <nav className="fixed top-0 left-0 w-full z-50 bg-black backdrop-blur-md">
 
@@ -29,6 +33,7 @@ export default function Navbar() {
                 {/* site title */}
                 <Link
                     href="/"
+                    onClick={handleHomeClick}
                     className="font-typewriter text-white text-xs md:text-sm tracking-[0.15em] md:tracking-[0.25em] uppercase hover:text-crimson transition-colors duration-500">
                     ✦ Real Gods Require Blood
                 </Link>
@@ -39,6 +44,9 @@ export default function Navbar() {
                         <Link
                             key={link.href}
                             href={link.href}
+                            onClick={() => {
+                                if (link.href === "/") handleHomeClick();
+                            }}
                             className="text-xs text-zinc-300 hover:text-white tracking-[0.2em] uppercase font-typewriter transition-colors duration-300"
                         >
                             {link.label}
@@ -65,8 +73,11 @@ export default function Navbar() {
                         <Link
                             key={link.href}
                             href={link.href}
+                            onClick={() => {
+                                setMenuOpen(false);
+                                if (link.href === "/") handleHomeClick();
+                            }}
                             className="text-xs text-zinc-300 hover:text-white tracking-[0.2em] uppercase font-typewriter transition-colors duration-300 py-2 border-b border-white/5"
-                            onClick={() => setMenuOpen(false)}
                         >
                             {link.label}
                         </Link>
