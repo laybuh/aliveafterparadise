@@ -34,13 +34,14 @@ export default function RootLayout({
         <Footer />
         {/* Ko-fi floating button */}
 
-        <a href="https://ko-fi.com/alifeafterparadise"
+        <a
+          href="https://ko-fi.com/alifeafterparadise"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-6 left-6 z-50 flex items-center gap-2 bg-black border border-zinc-700 hover:border-white text-white text-xs font-typewriter tracking-[0.15em] uppercase px-4 py-3 transition-all duration-300 hover:bg-zinc-900"
+          className="fixed bottom-6 left-6 z-50 flex items-center gap-2 bg-black border border-zinc-700 hover:border-white text-white font-typewriter tracking-[0.1em] px-3 py-2 md:px-4 md:py-3 text-[10px] md:text-xs transition-all duration-300 hover:bg-zinc-900"
           style={{ boxShadow: "0 0 20px rgba(0,0,0,0.5)" }}
         >
-          ✦ ko-fi
+          ✦ Ko-fi!
         </a>
       </body>
     </html>
