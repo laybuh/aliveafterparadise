@@ -40,7 +40,7 @@ export default function RootLayout({
           className="fixed bottom-6 left-6 z-50 flex items-center gap-2 bg-black border border-zinc-700 hover:border-white text-white text-xs font-typewriter tracking-[0.15em] uppercase px-4 py-3 transition-all duration-300 hover:bg-zinc-900"
           style={{ boxShadow: "0 0 20px rgba(0,0,0,0.5)" }}
         >
-          ✦ tip jar
+          ✦ ko-fi
         </a>
       </body>
     </html>
