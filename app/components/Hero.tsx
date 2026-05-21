@@ -38,7 +38,8 @@ export default function Hero() {
             />
 
             {/* lorem text */}
-            <p className="max-w-xs md:max-w-xl text-zinc-400 text-sm leading-8 mb-10 md:mb-16 font-roboto">
+            <p className="max-w-[280px] md:max-w-xl text-zinc-400 text-xs md:text-sm leading-8 mb-10 md:mb-16 font-roboto"
+>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
