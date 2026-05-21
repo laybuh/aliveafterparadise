@@ -23,7 +23,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 bg-black backdrop-blur-md">
+        <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md" style={{ background: "rgba(0,0,0,0.95)" }}>
 
             {/* top gradient line */}
             <div className="h-[1px] w-full opacity-30" style={{ background: gradient }} />
@@ -68,7 +68,7 @@ export default function Navbar() {
 
             {/* mobile menu */}
             {menuOpen && (
-                <div className="md:hidden flex flex-col bg-black px-6 py-6 gap-5 border-t border-white/5">
+                <div className="md:hidden flex flex-col px-6 py-6 gap-5 border-t border-white/5" style={{ background: "rgba(10,10,10,0.98)" }}>
                     {navLinks.map((link) => (
                         <Link
                             key={link.href}

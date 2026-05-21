@@ -11,7 +11,7 @@ export default function Hero() {
         <section
             className="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 md:pt-32 pb-20"
             style={{
-                background: "radial-gradient(ellipse at 20% 50%, #1a050588 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, #05051488 0%, transparent 50%), #0a0a0a",
+                background: "radial-gradient(ellipse at 20% 50%, #1a050544 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, #05051444 0%, transparent 50%), transparent",
             }}
         >
 
@@ -36,7 +36,7 @@ export default function Hero() {
             <div
                 className="w-full max-w-[280px] md:max-w-[500px] h-[170px] md:h-[300px] mb-10 md:mb-16 flex items-center justify-center"
                 style={{
-                    background: "linear-gradient(135deg, #1a0505, #120818, #0a0a14)",
+                    background: "linear-gradient(135deg, #1a050533, #12081833, #0a0a1433)",
                     border: "1px solid #8E488D44",
                 }}
             />
