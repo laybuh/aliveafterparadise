@@ -1,16 +1,5 @@
 import Link from "next/link";
 
-
-const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/blog", label: "Blog" },
-    { href: "/gallery", label: "Gallery" },
-    { href: "/story-list", label: "Story List" },
-    { href: "/about", label: "About Me" },
-    { href: "/about-the-project", label: "About The Project" },
-    { href: "/shop", label: "Shop" },
-];
-
 const socialLinks = [
     { href: "https://instagram.com/themichiferqueen", label: "Instagram" },
     { href: "https://tumblr.com", label: "Tumblr" },
@@ -27,7 +16,7 @@ export default function Footer() {
             {/* top gradient line */}
             <div className="h-[1px] w-full opacity-50" style={{ background: gradient }} />
 
-            <div className="max-w-7xl mx-auto px-10 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="max-w-7xl mx-auto px-10 py-16 grid grid-cols-1 md:grid-cols-2 gap-12">
 
                 {/* left - site info */}
                 <div className="flex flex-col gap-4">
@@ -40,22 +29,6 @@ export default function Footer() {
                     <p className="font-roboto text-zinc-700 text-xs">
                         © 2026 All rights reserved.
                     </p>
-                </div>
-
-                {/* middle - navigation */}
-                <div className="flex flex-col gap-4">
-                    <h4 className="font-typewriter text-zinc-400 text-xs tracking-[0.2em] uppercase mb-2">
-                        Navigate
-                    </h4>
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.href}
-                            href={link.href}
-                            className="font-roboto text-xs text-zinc-400 hover:text-white tracking-widest uppercase transition-colors duration-300"
-                        >
-                            {link.label}
-                        </Link>
-                    ))}
                 </div>
 
                 {/* right - socials */}
