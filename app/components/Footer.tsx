@@ -12,9 +12,9 @@ const navLinks = [
 ];
 
 const socialLinks = [
-    { href: "https://instagram.com/aliveafterparadise", label: "Instagram" },
-    { href: "https://aliveafterparadise.tumblr.com", label: "Tumblr" },
-    { href: "https://www.youtube.com/channel/UCI_sWIovmKaQGcnQvyzHlwg", label: "YouTube" },
+    { href: "https://instagram.com/themichiferqueen", label: "Instagram" },
+    { href: "https://tumblr.com", label: "Tumblr" },
+    { href: "https://youtube.com", label: "YouTube" },
     { href: "https://archiveofourown.org/users/themichiferqueen", label: "AO3" },
 ];
 
