@@ -31,7 +31,7 @@ export default function AgeGate() {
                         background: "linear-gradient(to right, #BC2205, #8E488D, #26C2F8)",
                     }}
                 >
-                    <span className="font-pixel text-white text-[8px]">real gods require blood</span>
+                    <span className="font-pixel text-white text-[8px]">themichiferqueen</span>
                     <span className="font-pixel text-white text-[8px] px-1" style={{ background: "#1a1a1a", border: "1px solid #555" }}>✕</span>
                 </div>
 
