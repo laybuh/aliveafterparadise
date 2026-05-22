@@ -37,39 +37,18 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${courierPrime.variable} ${roboto.variable} ${pressStart.variable}`}>
 
-        {/* background image left */}
+        {/* background image */}
         <div
           style={{
             position: "fixed",
-            top: 0,
-            left: 0,
-            width: "30%",
-            height: "100%",
+            inset: 0,
             zIndex: 0,
             pointerEvents: "none",
             backgroundImage: "url('/michifer.png')",
             backgroundSize: "contain",
-            backgroundPosition: "left center",
+            backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            opacity: 0.06,
-          }}
-        />
-
-        {/* background image right */}
-        <div
-          style={{
-            position: "fixed",
-            top: 0,
-            right: 0,
-            width: "30%",
-            height: "100%",
-            zIndex: 0,
-            pointerEvents: "none",
-            backgroundImage: "url('/michifer.png')",
-            backgroundSize: "contain",
-            backgroundPosition: "right center",
-            backgroundRepeat: "no-repeat",
-            opacity: 0.06,
+            opacity: 0.085,
           }}
         />
 

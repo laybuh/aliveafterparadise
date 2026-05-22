@@ -33,10 +33,12 @@ export default function Hero() {
             </p>
 
             {/* image placeholder */}
-            <div
-                className="w-full max-w-[280px] md:max-w-[500px] h-[170px] md:h-[300px] mb-10 md:mb-16 flex items-center justify-center"
+            <img
+                src="https://plus.unsplash.com/premium_photo-1677785615002-c52ffab408a4?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="hero image"
+                className="w-full max-w-[280px] md:max-w-[500px] h-[170px] md:h-[300px] object-cover mb-10 md:mb-16"
                 style={{
-                    background: "linear-gradient(135deg, #1a050533, #12081833, #0a0a1433)",
+                    opacity: 0.99,
                     borderTop: "2px solid #3a3a3a",
                     borderLeft: "2px solid #3a3a3a",
                     borderBottom: "2px solid #000000",
