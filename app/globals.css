@@ -67,7 +67,8 @@ body::before {
       rgba(188, 34, 5, 0.01) 9px);
 }
 
-html,
-body {
+html, body {
   background-color: #000000;
+  position: relative;
+  min-height: 100%;
 }

@@ -38,19 +38,22 @@ export default function RootLayout({
       <body className={`${courierPrime.variable} ${roboto.variable} ${pressStart.variable}`}>
 
         {/* background image */}
-        <div
-          style={{
-            position: "fixed",
-            inset: 0,
-            zIndex: 0,
-            pointerEvents: "none",
-            backgroundImage: "url('/michifer.png')",
-            backgroundSize: "contain",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            opacity: 0.085,
-          }}
-        />
+<div
+  style={{
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    minHeight: "100%",
+    zIndex: 0,
+    pointerEvents: "none",
+    backgroundImage: "url('/michifer.png')",
+    backgroundSize: "80%",
+    backgroundPosition: "center top",
+    backgroundRepeat: "repeat-y",
+    opacity: 0.085,
+  }}
+/>
 
         <AgeGate />
         <Navbar />
